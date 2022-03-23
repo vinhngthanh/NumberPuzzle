@@ -37,7 +37,6 @@ class SettingsFragment : Fragment() {
         backToWelcome.setOnClickListener {
             findNavController().navigate(R.id.action_settingsFragment_to_welcomeFragment)
         }
-
         return view
     }
 

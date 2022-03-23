@@ -57,6 +57,14 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popUpTo="@id/welcomeFragment"
             app:popUpToInclusive="false" />
+        <argument
+            android:name="TileColor"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="TextColor"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"

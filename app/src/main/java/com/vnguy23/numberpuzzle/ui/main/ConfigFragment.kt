@@ -31,7 +31,8 @@ class ConfigFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_config, container, false)
         toGame = view.findViewById(R.id.configToGame)
         toGame.setOnClickListener {
-            findNavController().navigate(R.id.action_configFragment_to_gameFragment)
+            val action = ConfigFragmentDirections.actionConfigFragmentToGameFragment()
+            findNavController().navigate(action)
         }
         return view
     }
