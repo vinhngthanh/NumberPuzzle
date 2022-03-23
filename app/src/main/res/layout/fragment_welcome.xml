@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome"
+    android:background="@color/WelcomeBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.WelcomeFragment">
+
+    <Button
+        android:id="@+id/welcomeToSettings"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/welcomeToSettings"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeToConfig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/welcomeToConfig"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="136dp"
+        android:text="@string/welcomeToConfig"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:text="@string/WelcomeMessage"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:textColor="#FEFAE0"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeToSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105" />
+</androidx.constraintlayout.widget.ConstraintLayout>
