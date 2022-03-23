@@ -16,4 +16,10 @@
     <string name="_5">5</string>
     <string name="_6">6</string>
     <string name="_7">7</string>
+    <string name="blue_tile">BLUE TILE</string>
+    <string name="red_tile">RED TILE</string>
+    <string name="beige_text">BEIGE TEXT</string>
+    <string name="black_text">BLACK TEXT</string>
+    <string name="text_color">Text Color:</string>
+    <string name="tile_color">Tile Color:</string>
 </resources>

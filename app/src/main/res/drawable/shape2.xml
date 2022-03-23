@@ -4,12 +4,12 @@
     android:shape="rectangle" >
 
     <stroke
-        android:color="@color/stroke"
+        android:color="@color/stroke1"
         android:width="2dp"/>
     <corners
         android:radius="10dp"/>
     <solid
-        android:color="@color/Blue_button"/>
+        android:color="@color/red_button"/>
     <size
         android:width="100dp"
         android:height="100dp" />

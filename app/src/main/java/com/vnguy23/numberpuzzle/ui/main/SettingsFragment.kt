@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.RadioGroup
 import androidx.navigation.fragment.findNavController
 import com.vnguy23.numberpuzzle.R
 
@@ -18,6 +19,8 @@ import com.vnguy23.numberpuzzle.R
 class SettingsFragment : Fragment() {
 
     private lateinit var backToWelcome: Button
+    private lateinit var TileColor: RadioGroup
+    private lateinit var TextColor: RadioGroup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +37,7 @@ class SettingsFragment : Fragment() {
         backToWelcome.setOnClickListener {
             findNavController().navigate(R.id.action_settingsFragment_to_welcomeFragment)
         }
+
         return view
     }
 

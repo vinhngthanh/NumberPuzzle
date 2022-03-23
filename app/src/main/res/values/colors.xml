@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="WelcomeBackground">#A96B1E</color>
     <color name="Blue_button">#0d83ed</color>
-    <color name="stroke">#FF000000</color>
+    <color name="stroke1">#FF000000</color>
+    <color name="red_button">#8c4959</color>
+    <color name="stroke2">#BDC29B</color>
 </resources>
