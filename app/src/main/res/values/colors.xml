@@ -12,4 +12,5 @@
     <color name="stroke1">#FF000000</color>
     <color name="red_button">#8c4959</color>
     <color name="stroke2">#BDC29B</color>
+    <color name="RecycleView">#783f04</color>
 </resources>
