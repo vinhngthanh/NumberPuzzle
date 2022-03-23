@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="WelcomeBackground">#A96B1E</color>
+    <color name="Blue_button">#0d83ed</color>
+    <color name="stroke">#FF000000</color>
 </resources>
