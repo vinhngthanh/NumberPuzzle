@@ -16,7 +16,6 @@ class WelcomeFragment : Fragment() {
 
     private lateinit var toSettings: Button
     private lateinit var toConfig: Button
-    private val args:WelcomeFragmentArgs by navArgs()
 
     companion object {
         fun newInstance() = WelcomeFragment()
@@ -35,7 +34,7 @@ class WelcomeFragment : Fragment() {
         }
         toConfig = view.findViewById(R.id.welcomeToConfig)
         toConfig.setOnClickListener {
-            val action = WelcomeFragmentDirections.actionWelcomeFragmentToConfigFragment(args.tileColor, args.textColor)
+            val action = WelcomeFragmentDirections.actionWelcomeFragmentToConfigFragment()
             findNavController().navigate(action)
         }
         return view

@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.vnguy23.numberpuzzle.R
+import com.vnguy23.numberpuzzle.ui.main.model.MainViewModel
 
 
 /**
@@ -24,6 +26,7 @@ class SettingsFragment : Fragment() {
     private lateinit var TextColor: RadioGroup
     private lateinit var TileColorOption: RadioButton
     private lateinit var TextColorOption: RadioButton
+    private val sharedViewModel: MainViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +61,7 @@ class SettingsFragment : Fragment() {
         }
         backToWelcome = view.findViewById(R.id.SettingsToWelcome)
         backToWelcome.setOnClickListener {
-            val action = SettingsFragmentDirections.actionSettingsFragmentToWelcomeFragment(tileOption, textOption)
+            val action = SettingsFragmentDirections.actionSettingsFragmentToWelcomeFragment()
             findNavController().navigate(action)
         }
         return view

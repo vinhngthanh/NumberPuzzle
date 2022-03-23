@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.vnguy23.numberpuzzle.R
 
 /**
@@ -17,6 +18,7 @@ import com.vnguy23.numberpuzzle.R
 class GameFragment : Fragment() {
 
     private lateinit var toResult:Button
+    private lateinit var buttons:Array<Array<Button>>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,8 @@ class GameFragment : Fragment() {
         toResult.setOnClickListener {
             findNavController().navigate(R.id.action_gameFragment_to_resultFragment)
         }
+
+        buttons.
         return view
     }
 
