@@ -11,7 +11,27 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="GAME" />
+        android:text="GAME"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="229dp" />
+
+    <RelativeLayout
+        android:id="@+id/group"
+        android:layout_width="2dp"
+        android:layout_height="6dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/Button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Button>
+    </RelativeLayout>
 
     <Button
         android:id="@+id/gameToResult"
