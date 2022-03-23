@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.navigation.fragment.findNavController
 import com.vnguy23.numberpuzzle.R
@@ -21,6 +22,8 @@ class SettingsFragment : Fragment() {
     private lateinit var backToWelcome: Button
     private lateinit var TileColor: RadioGroup
     private lateinit var TextColor: RadioGroup
+    private lateinit var TileColorOption: RadioButton
+    private lateinit var TextColorOption: RadioButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +36,30 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
+        var tileOption = 1
+        var textOption = 1
+        TileColor = view.findViewById(R.id.TileSettingGroup)
+        TileColor.setOnCheckedChangeListener { radioGroup, i ->
+            TileColorOption = view.findViewById<RadioButton>(i)
+            tileOption = if(TileColorOption.text.toString() == "BLUE TILE"){
+                1
+            } else{
+                2
+            }
+        }
+        TextColor = view.findViewById(R.id.TextSettingGroup)
+        TextColor.setOnCheckedChangeListener { radioGroup, i ->
+            TextColorOption = view.findViewById<RadioButton>(i)
+            textOption = if(TextColorOption.text.toString() == "BLACK TEXT"){
+                1
+            } else{
+                2
+            }
+        }
         backToWelcome = view.findViewById(R.id.SettingsToWelcome)
         backToWelcome.setOnClickListener {
-            findNavController().navigate(R.id.action_settingsFragment_to_welcomeFragment)
+            val action = SettingsFragmentDirections.actionSettingsFragmentToWelcomeFragment(tileOption, textOption)
+            findNavController().navigate(action)
         }
         return view
     }

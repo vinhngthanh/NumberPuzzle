@@ -20,6 +20,14 @@
             app:destination="@id/settingsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="TileColor"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="TextColor"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
     <fragment
         android:id="@+id/configFragment"
@@ -33,6 +41,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popUpTo="@id/welcomeFragment"
             app:popUpToInclusive="false" />
+        <argument
+            android:name="TileColor"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument android:name="TextColor"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"

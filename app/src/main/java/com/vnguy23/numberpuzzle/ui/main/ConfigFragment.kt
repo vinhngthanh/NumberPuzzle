@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.vnguy23.numberpuzzle.R
 
 /**
@@ -17,6 +18,7 @@ import com.vnguy23.numberpuzzle.R
 class ConfigFragment : Fragment() {
 
     private lateinit var toGame:Button
+    private val args:WelcomeFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +33,7 @@ class ConfigFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_config, container, false)
         toGame = view.findViewById(R.id.configToGame)
         toGame.setOnClickListener {
-            val action = ConfigFragmentDirections.actionConfigFragmentToGameFragment()
+            val action = ConfigFragmentDirections.actionConfigFragmentToGameFragment(args.tileColor, args.textColor)
             findNavController().navigate(action)
         }
         return view

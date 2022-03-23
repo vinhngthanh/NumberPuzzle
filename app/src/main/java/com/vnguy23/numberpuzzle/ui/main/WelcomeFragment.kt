@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.vnguy23.numberpuzzle.R
 import com.vnguy23.numberpuzzle.ui.main.model.MainViewModel
 
@@ -15,6 +16,7 @@ class WelcomeFragment : Fragment() {
 
     private lateinit var toSettings: Button
     private lateinit var toConfig: Button
+    private val args:WelcomeFragmentArgs by navArgs()
 
     companion object {
         fun newInstance() = WelcomeFragment()
@@ -33,7 +35,8 @@ class WelcomeFragment : Fragment() {
         }
         toConfig = view.findViewById(R.id.welcomeToConfig)
         toConfig.setOnClickListener {
-            findNavController().navigate(R.id.action_welcomeFragment_to_configFragment)
+            val action = WelcomeFragmentDirections.actionWelcomeFragmentToConfigFragment(args.tileColor, args.textColor)
+            findNavController().navigate(action)
         }
         return view
     }
