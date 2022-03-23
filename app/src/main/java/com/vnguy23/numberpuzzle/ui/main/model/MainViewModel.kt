@@ -5,28 +5,22 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
-    private val _tileChoice: MutableLiveData<Int> = MutableLiveData()
-    private val _textChoice: MutableLiveData<Int> = MutableLiveData()
-
-    val tileChoice: LiveData<Int>
-        get() = _tileChoice
-
-    val textChoice: LiveData<Int>
-        get() = _textChoice
-
-    init {
-        _tileChoice.value = 1
-    }
-
-    init {
-        _textChoice.value = 1
-    }
+    private var _tileChoice: Int = 1
+    private var _textChoice: Int = 1
 
     fun changeTile(opt:Int) {
-        _tileChoice.value = opt
+        _tileChoice = opt
     }
 
     fun changeText(opt:Int) {
-        _textChoice.value = opt
+        _textChoice = opt
+    }
+
+    fun getTile(): Int {
+        return _tileChoice
+    }
+
+    fun getText(): Int {
+        return _textChoice
     }
 }

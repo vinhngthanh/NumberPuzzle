@@ -30,4 +30,7 @@
     <string name="_13">13</string>
     <string name="_14">14</string>
     <string name="_15">15</string>
+    <string name="press_the_button_to_play_again">PRESS THE BUTTON TO PLAY AGAIN!</string>
+    <string name="WINNER">YOU WON!</string>
+    <string name="SURRENDER">YOU SURRENDER</string>
 </resources>

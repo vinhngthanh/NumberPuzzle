@@ -7,22 +7,42 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.ResultFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="RESULT" />
 
     <Button
         android:id="@+id/newGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
         android:text="@string/new_game"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
 
+    <TextView
+        android:id="@+id/GameStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/WINNER"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/newGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <TextView
+        android:id="@+id/WannaTryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/press_the_button_to_play_again"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/newGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
 </androidx.constraintlayout.widget.ConstraintLayout>
