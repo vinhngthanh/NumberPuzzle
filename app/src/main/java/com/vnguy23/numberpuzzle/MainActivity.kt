@@ -11,5 +11,5 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_NumberPuzzle)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-    }C2
+    }
 }
