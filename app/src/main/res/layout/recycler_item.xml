@@ -8,7 +8,7 @@
     android:id="@+id/cardView"
     android:layout_margin="2dp"
     android:orientation="horizontal"
-    cardView:cardBackgroundColor="@color/cardview_dark_background"
+    cardView:cardBackgroundColor="#274e13"
     cardView:cardCornerRadius="12dp"
     cardView:cardElevation="12dp">
 
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:textColor="@color/white"
+            android:textColor="#FFD97C"
             android:textSize="26sp"
             tools:text="term" />
 
