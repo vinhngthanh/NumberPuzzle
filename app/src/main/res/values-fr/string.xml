@@ -1,2 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Casse-tête numérique</string>
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
+    <string name="welcomeToSettings">RÉGLAGES</string>
+    <string name="welcomeToConfig">DÉMARRER JEU</string>
+    <string name="WelcomeMessage">BIENVENUE AU PUZZLE NUMÉRO</string>
+    <string name="SettingsToWelcome">ARRIÈRE</string>
+    <string name="configToGame">JOUER!</string>
+    <string name="gameToResult">FIN DU JEU</string>
+    <string name="new_game">NOUVEAU JEU!</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_4">4</string>
+    <string name="_3">3</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="blue_tile">TUILE BLEUE</string>
+    <string name="red_tile">TUILE ROUGE</string>
+    <string name="beige_text">TEXTE BEIGE</string>
+    <string name="black_text">TEXTE NOIR</string>
+    <string name="text_color">Couleur du texte:</string>
+    <string name="tile_color">Couleur du carreau:</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_10">10</string>
+    <string name="_11">11</string>
+    <string name="_12">12</string>
+    <string name="_13">13</string>
+    <string name="_14">14</string>
+    <string name="_15">15</string>
+    <string name="easy">facile</string>
+    <string name="medium">moyenne</string>
+    <string name="hard">dure</string>
+    <string name="press_the_button_to_play_again">APPUYEZ SUR LE BOUTON POUR JOUER ENCORE!</string>
+    <string name="WINNER">TU AS GAGNÉ!</string>
+    <string name="SURRENDER">VOUS RENDEZ-VOUS</string>
+    <string name="game_mode_easy">Mode Jeu : Facile !</string>
+    <string name="game_mode_medium">Mode de jeu: moyen!</string>
+    <string name="game_mode_hard">Mode de jeu : Difficile !</string>
+</resources>

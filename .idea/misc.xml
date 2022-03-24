@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.222" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/drawable-v24/splash_bg.xml" value="0.222" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/drawable/ic__298910441.xml" value="0.114" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/drawable/ic_icon.xml" value="0.137" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/drawable/ic_puzzle8.xml" value="0.114" />
         <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/drawable/shape1.xml" value="0.222" />
         <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/drawable/shape2.xml" value="0.222" />
         <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/layout/fragment_config.xml" value="0.2604166666666667" />
@@ -13,6 +18,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/layout/main_activity.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/layout/main_fragment.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/layout/recycler_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/NumberPuzzle/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.222" />
       </map>
     </option>
   </component>
