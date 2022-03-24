@@ -20,6 +20,7 @@
 
         <Button
             android:id="@+id/Button00"
+            android:tag="00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -34,6 +35,7 @@
 
         <Button
             android:id="@+id/Button01"
+            android:tag="01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -48,6 +50,7 @@
 
         <Button
             android:id="@+id/Button02"
+            android:tag="02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -62,6 +65,7 @@
 
         <Button
             android:id="@+id/Button03"
+            android:tag="03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -76,6 +80,7 @@
 
         <Button
             android:id="@+id/Button10"
+            android:tag="10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -89,6 +94,7 @@
         </Button>
         <Button
             android:id="@+id/Button11"
+            android:tag="11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -102,6 +108,7 @@
         </Button>
         <Button
             android:id="@+id/Button12"
+            android:tag="12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -114,6 +121,7 @@
         </Button>
         <Button
             android:id="@+id/Button13"
+            android:tag="13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -127,6 +135,7 @@
         </Button>
         <Button
             android:id="@+id/Button20"
+            android:tag="20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -139,6 +148,7 @@
         </Button>
         <Button
             android:id="@+id/Button21"
+            android:tag="21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -151,6 +161,7 @@
         </Button>
         <Button
             android:id="@+id/Button22"
+            android:tag="22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -163,6 +174,7 @@
         </Button>
         <Button
             android:id="@+id/Button23"
+            android:tag="23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -175,6 +187,7 @@
         </Button>
         <Button
             android:id="@+id/Button30"
+            android:tag="30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -187,6 +200,7 @@
         </Button>
         <Button
             android:id="@+id/Button31"
+            android:tag="31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -199,6 +213,7 @@
         </Button>
         <Button
             android:id="@+id/Button32"
+            android:tag="32"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape1"
@@ -211,6 +226,7 @@
         </Button>
         <Button
             android:id="@+id/Button33"
+            android:tag="33"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@color/white"
@@ -311,7 +327,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
-        android:text="@string/gameToResult"
+        android:text="@string/surrender"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

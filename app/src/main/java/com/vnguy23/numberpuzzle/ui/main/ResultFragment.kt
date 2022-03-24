@@ -6,29 +6,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
+import androidx.navigation.NavHost
+import androidx.navigation.NavArgs
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.vnguy23.numberpuzzle.R
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ResultFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ResultFragment : Fragment() {
+class ResultFragment : Fragment(R.layout.fragment_result) {
     private lateinit var newGame: Button
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
-    }
+    private lateinit var stat: TextView
+    private val args:ResultFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view=inflater.inflate(R.layout.fragment_result, container, false)
-
+        stat = view.findViewById(R.id.GameStatus)
+        if(args.status == "1"){
+            stat.text = resources.getText(R.string.SURRENDER)
+        }else{
+            stat.text = resources.getText(R.string.WINNER)
+        }
         newGame = view.findViewById(R.id.newGame)
         newGame.setOnClickListener {
             findNavController().navigate(R.id.action_resultFragment_to_welcomeFragment)
@@ -36,21 +36,4 @@ class ResultFragment : Fragment() {
         return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ResultFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ResultFragment().apply {
-                arguments = Bundle().apply {
-                }
-            }
-    }
 }

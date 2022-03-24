@@ -23,10 +23,10 @@ import com.vnguy23.numberpuzzle.ui.main.model.MainViewModel
 class SettingsFragment : Fragment() {
 
     private lateinit var backToWelcome: Button
-    private lateinit var TileColor: RadioGroup
-    private lateinit var TextColor: RadioGroup
-    private lateinit var TileColorOption: RadioButton
-    private lateinit var TextColorOption: RadioButton
+    private lateinit var tileColor: RadioGroup
+    private lateinit var textColor: RadioGroup
+    private lateinit var tileColorOption: RadioButton
+    private lateinit var textColorOption: RadioButton
 //    private var sharedViewModel: MainViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,33 +42,33 @@ class SettingsFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
         val sharedViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         if(sharedViewModel.getTile() == 1){
-            TileColorOption = view.findViewById(R.id.BlueTile)
-            TileColorOption.isChecked = true
+            tileColorOption = view.findViewById(R.id.BlueTile)
+            tileColorOption.isChecked = true
         }else{
-            TileColorOption = view.findViewById(R.id.RedTile)
-            TileColorOption.isChecked = true
+            tileColorOption = view.findViewById(R.id.RedTile)
+            tileColorOption.isChecked = true
         }
 
         if(sharedViewModel.getText() == 1){
-            TextColorOption = view.findViewById(R.id.BlackText)
-            TextColorOption.isChecked = true
+            textColorOption = view.findViewById(R.id.BlackText)
+            textColorOption.isChecked = true
         }else{
-            TextColorOption = view.findViewById(R.id.BeigeText)
-            TextColorOption.isChecked = true
+            textColorOption = view.findViewById(R.id.BeigeText)
+            textColorOption.isChecked = true
         }
-        TileColor = view.findViewById(R.id.TileSettingGroup)
-        TileColor.setOnCheckedChangeListener { radioGroup, i ->
-            TileColorOption = view.findViewById<RadioButton>(i)
-            if(TileColorOption.text.toString() == "BLUE TEXT"){
+        tileColor = view.findViewById(R.id.TileSettingGroup)
+        tileColor.setOnCheckedChangeListener { _, i ->
+            tileColorOption = view.findViewById<RadioButton>(i)
+            if(tileColorOption.text.toString() == resources.getString(R.string.blue_tile)){
                 sharedViewModel.changeTile(1)
             } else{
                 sharedViewModel.changeTile(2)
             }
         }
-        TextColor = view.findViewById(R.id.TextSettingGroup)
-        TextColor.setOnCheckedChangeListener { radioGroup, i ->
-            TextColorOption = view.findViewById<RadioButton>(i)
-            if(TextColorOption.text.toString() == "BLACK TEXT"){
+        textColor = view.findViewById(R.id.TextSettingGroup)
+        textColor.setOnCheckedChangeListener { _, i ->
+            textColorOption = view.findViewById<RadioButton>(i)
+            if(textColorOption.text.toString() == resources.getString(R.string.black_text)){
                 sharedViewModel.changeText(1)
             } else{
                 sharedViewModel.changeText(2)

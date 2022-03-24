@@ -14,4 +14,5 @@
     <color name="stroke2">#BDC29B</color>
     <color name="RecycleView">#783f04</color>
     <color name="gold">#f0e68c</color>
+    <color name="grey">#bcbcbc</color>
 </resources>

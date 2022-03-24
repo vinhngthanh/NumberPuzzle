@@ -70,5 +70,8 @@
             app:exitAnim="@anim/slide_out_left"
             app:popUpTo="@id/welcomeFragment"
             app:popUpToInclusive="false" />
+        <argument
+            android:name="status"
+            app:argType="string" />
     </fragment>
 </navigation>

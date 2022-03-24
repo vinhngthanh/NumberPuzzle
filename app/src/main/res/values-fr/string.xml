@@ -39,4 +39,5 @@
     <string name="game_mode_easy">Mode Jeu : Facile !</string>
     <string name="game_mode_medium">Mode de jeu: moyen!</string>
     <string name="game_mode_hard">Mode de jeu : Difficile !</string>
+    <string name="surrender">ABANDON</string>
 </resources>

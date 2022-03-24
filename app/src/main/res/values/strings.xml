@@ -38,4 +38,5 @@
     <string name="game_mode_easy">Game Mode: Easy!</string>
     <string name="game_mode_medium">Game Mode: Medium!</string>
     <string name="game_mode_hard">Game Mode: Hard!</string>
+    <string name="surrender">SURRENDER</string>
 </resources>
