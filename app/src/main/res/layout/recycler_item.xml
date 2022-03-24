@@ -18,10 +18,11 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/color_textView"
+            android:id="@+id/config_textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="6dp"
+            android:textAlignment="center"
             android:textColor="#FFD97C"
             android:textSize="26sp"
             tools:text="term" />

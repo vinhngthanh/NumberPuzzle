@@ -30,7 +30,13 @@
     <string name="_13">13</string>
     <string name="_14">14</string>
     <string name="_15">15</string>
+    <string name="easy">easy</string>
+    <string name="medium">medium</string>
+    <string name="hard">hard</string>
     <string name="press_the_button_to_play_again">PRESS THE BUTTON TO PLAY AGAIN!</string>
     <string name="WINNER">YOU WON!</string>
     <string name="SURRENDER">YOU SURRENDER</string>
+    <string name="game_mode_easy">Game Mode: Easy!</string>
+    <string name="game_mode_medium">Game Mode: Medium!</string>
+    <string name="game_mode_hard">Game Mode: Hard!</string>
 </resources>

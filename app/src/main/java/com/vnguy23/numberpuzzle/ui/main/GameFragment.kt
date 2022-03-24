@@ -13,16 +13,10 @@ import androidx.navigation.fragment.findNavController
 import com.vnguy23.numberpuzzle.R
 import com.vnguy23.numberpuzzle.ui.main.model.MainViewModel
 
-/**
- * A simple [Fragment] subclass.
- * Use the [GameFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class GameFragment : Fragment() {
 
     private lateinit var toResult:Button
     private lateinit var buttons:Array<Array<Button>>
-//    private var sharedViewModel: MainViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
