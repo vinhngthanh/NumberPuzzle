@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_NumberPuzzle)
         Timer().schedule(10000){
-            TODO("Do somefing")
+            TODO("Do something")
         }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
