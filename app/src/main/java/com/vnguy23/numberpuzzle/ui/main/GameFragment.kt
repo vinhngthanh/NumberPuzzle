@@ -29,6 +29,8 @@ class GameFragment : Fragment() {
     private val args:GameFragmentArgs by navArgs()
     private lateinit var animation:Animation
     private lateinit var animation2:Animation
+    private var isWin:Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -42,7 +44,6 @@ class GameFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_game, container, false)
         val sharedViewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
         animation2 = AnimationUtils.loadAnimation(context, R.anim.win_board)
-        animation = AnimationUtils.loadAnimation(context, R.anim.glow)
         toResult = view.findViewById(R.id.gameToResult)
         toResult.setOnClickListener {
             Toast.makeText(context, R.string.SURRENDER,Toast.LENGTH_SHORT).show()
@@ -145,8 +146,11 @@ class GameFragment : Fragment() {
                 context?.packageName
             ))
             emptyBtn.text = btn.text
-            btn.text = ""
+
+            animation = AnimationUtils.loadAnimation(context, R.anim.glow)
             emptyBtn.startAnimation(animation)
+
+            btn.text = ""
             btn.setBackgroundResource(R.drawable.empty)
             if (sharedViewModel.getText() == 1) {
                 emptyBtn.setTextColor(ContextCompat.getColor(view.context, R.color.stroke1))
@@ -158,6 +162,7 @@ class GameFragment : Fragment() {
             } else {
                 emptyBtn.setBackgroundResource((R.drawable.shape2))
             }
+
             emptyX = x
             emptyY = y
 
@@ -167,13 +172,15 @@ class GameFragment : Fragment() {
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun checkWin(view: View) {
-        var isWin=false
-        if(emptyX==3&&emptyY==3){
+        isWin=false
+        if(emptyX==3 && emptyY==3){
             for(i in 0 until 4){
                 for(j in 0 until 4){
-                    if(i==3&&j==3) {continue}
+                    if(i==3 && j==3){
+                        break
+                    }
                     val btn: Button = view.findViewWithTag("$i$j")
-                    val count = i*4 + j + 1
+                    val count = i*4+j+1
                     if(btn.text == "$count"){
                         isWin = true
                     }else{
@@ -189,6 +196,7 @@ class GameFragment : Fragment() {
                 for (j in 0 until 4) {
                     val btn: Button = view.findViewWithTag("$i$j")
                     btn.background = resources.getDrawable(R.drawable.win)
+                    btn.setTextColor(resources.getColor(R.color.black))
                     btn.startAnimation(animation2)
                 }
             }
