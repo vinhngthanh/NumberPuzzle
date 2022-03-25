@@ -2,15 +2,19 @@ package com.vnguy23.numberpuzzle.ui.main
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.vnguy23.numberpuzzle.R
 import com.vnguy23.numberpuzzle.ui.main.model.MainViewModel
 import kotlin.math.abs
@@ -22,7 +26,9 @@ class GameFragment : Fragment() {
     private lateinit var tiles:Array<Int>
     private var emptyX:Int = 3
     private var emptyY:Int = 3
-
+    private val args:GameFragmentArgs by navArgs()
+    private lateinit var animation:Animation
+    private lateinit var animation2:Animation
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,6 +41,8 @@ class GameFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_game, container, false)
         val sharedViewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
+        animation2 = AnimationUtils.loadAnimation(context, R.anim.win_board)
+        animation = AnimationUtils.loadAnimation(context, R.anim.glow)
         toResult = view.findViewById(R.id.gameToResult)
         toResult.setOnClickListener {
             Toast.makeText(context, R.string.SURRENDER,Toast.LENGTH_SHORT).show()
@@ -42,11 +50,35 @@ class GameFragment : Fragment() {
             val action1 = GameFragmentDirections.actionGameFragmentToResultFragment(temp)
             findNavController().navigate(action1)
         }
-
         tiles = Array(15){it+1}
-        do{
-            tiles.shuffle()
-        }while(!isSolvable(tiles))
+
+        when (args.mode) {
+            3 -> {
+                do{
+                    tiles.shuffle()
+                }while(!isSolvable(tiles))
+            }
+            2 -> {
+                do{
+                    tiles = Array(15){it+1}
+                    val tempArr = Array(11){it+5}
+                    tempArr.shuffle()
+                    for(i in 4 until 15){
+                        tiles[i] = tempArr[i-4]
+                    }
+                }while(!isSolvable(tiles))
+            }
+            else -> {
+                do{
+                    tiles = Array(15){it+1}
+                    val tempArr = Array(7){it+9}
+                    tempArr.shuffle()
+                    for(i in 8 until 15){
+                        tiles[i] = tempArr[i-8]
+                    }
+                }while(!isSolvable(tiles))
+            }
+        }
 
         buttons = Array(4){r->
             Array(4){c->
@@ -55,6 +87,8 @@ class GameFragment : Fragment() {
         }
         return view
     }
+
+
 
     private fun isSolvable(tiles: Array<Int>):Boolean {
         var countInversion = 0
@@ -112,6 +146,7 @@ class GameFragment : Fragment() {
             ))
             emptyBtn.text = btn.text
             btn.text = ""
+            emptyBtn.startAnimation(animation)
             btn.setBackgroundResource(R.drawable.empty)
             if (sharedViewModel.getText() == 1) {
                 emptyBtn.setTextColor(ContextCompat.getColor(view.context, R.color.stroke1))
@@ -130,6 +165,7 @@ class GameFragment : Fragment() {
         }
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private fun checkWin(view: View) {
         var isWin=false
         if(emptyX==3&&emptyY==3){
@@ -142,17 +178,27 @@ class GameFragment : Fragment() {
                         isWin = true
                     }else{
                         isWin = false
-                        break;
+                        break
                     }
                 }
             }
         }
 
         if(isWin){
-            val tem = "2"
-            val action = GameFragmentDirections.actionGameFragmentToResultFragment(tem)
-            findNavController().navigate(action)
-            Toast.makeText(context, R.string.WINNER, Toast.LENGTH_SHORT).show()
+            for(i in 0 until 4) {
+                for (j in 0 until 4) {
+                    val btn: Button = view.findViewWithTag("$i$j")
+                    btn.background = resources.getDrawable(R.drawable.win)
+                    btn.startAnimation(animation2)
+                }
+            }
+            val handler = Handler()
+            handler.postDelayed({
+                val tem = "2"
+                val action = GameFragmentDirections.actionGameFragmentToResultFragment(tem)
+                findNavController().navigate(action)
+                Toast.makeText(context, R.string.WINNER, Toast.LENGTH_SHORT).show()
+            }, 1000)
         }
     }
 }

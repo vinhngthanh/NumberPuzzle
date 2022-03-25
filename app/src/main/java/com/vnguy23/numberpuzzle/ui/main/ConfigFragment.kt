@@ -23,10 +23,7 @@ class ConfigFragment : Fragment() {
     private lateinit var recycler: RecyclerView
     private lateinit var prefs: SharedPreferences
     private lateinit var gameMode: TextView
-
-    companion object {
-        fun newInstance() = ConfigFragment()
-    }
+    private var mode: Int = 3
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +40,7 @@ class ConfigFragment : Fragment() {
         toGame = view.findViewById(R.id.configToGame)
         gameMode = view.findViewById(R.id.gameMode)
         toGame.setOnClickListener {
-            val action = ConfigFragmentDirections.actionConfigFragmentToGameFragment()
+            val action = ConfigFragmentDirections.actionConfigFragmentToGameFragment(mode)
             findNavController().navigate(action)
         }
         populateConfig()
@@ -95,10 +92,13 @@ class ConfigFragment : Fragment() {
         override fun onClick(v: View?) {
             if(configList.mode == resources.getString(R.string.easy)){
                 gameMode.text = resources.getString(R.string.game_mode_easy)
+                mode = 1
             }else if(configList.mode == resources.getString(R.string.medium)){
                 gameMode.text = resources.getString(R.string.game_mode_medium)
+                mode = 2
             }else{
                 gameMode.text = resources.getString(R.string.game_mode_hard)
+                mode = 3
             }
         }
 
